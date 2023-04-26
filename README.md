@@ -5,7 +5,7 @@
   <img src="./assets/img/Logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Hello_Microverse project</b></h3>
+  <h3><b>Personal portfolio project</b></h3>
 
 </div>
 
@@ -37,7 +37,7 @@
 
 # 📖 Hello Microverse <a name="about-project"></a>
 
-**Hello Microverse** is my first project using git & GitHub and I'm very excited to be part of the Microverse community. Also It's my first time using linterns and its configuration.
+**Personal_portfolio** is a project that consists of building a personal portfolio site. This project is part of the Microverse curriculum. In this first part, the project is built using only HTML and CSS. In the future, more technologies will be added. Besides, includes a README file with the project description and two sections: one with the navigation bar, and another with author's name and links to the author's social networks.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -59,6 +59,13 @@ In this project was only used HTML and CSS. More technologies Coming soon.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- If you want to see a preview from the project go an [click here!](https://sergio-usma.github.io/Personal_portfolio/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -83,7 +90,7 @@ Clone this repository to your desired folder:
 
 2. Open a terminal window and navigate to the directory where you want to clone the repository.
 
-3. Type "git clone" in the terminal window, followed by a space and then paste the repository URL https://github.com/sergio-usma/hello_microverse.git. Press "Enter" to clone the repository.
+3. Type "git clone" in the terminal window, followed by a space and then paste the repository URL https://github.com/sergio-usma/Personal_portfolio. Press "Enter" to clone the repository.
 
 4. Verify that the repository has been cloned successfully by checking the contents of the directory where you cloned it.
 
@@ -126,7 +133,13 @@ You can deploy this project using your preferred deployment method.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-Coming soon.
+These are the coming soon features for this project:
+
+1. [ ] Recent works and projects.
+2. [ ] "About me" section.
+3. [ ] Languages, frameworks and skills section.
+4. [ ] Contact form & footer sections.
+5. [ ] Responsive design for tablets and desktop.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

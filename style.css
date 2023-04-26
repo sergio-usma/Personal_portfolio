@@ -3,8 +3,8 @@
   --color-second_green: #c5e9da;
   --color-light-green: #ebf0ee;
   --color-dark-blue: #172b4d;
-  --color-white-bg:  #E5E5E5;
-  --color-white: #ffffff;
+  --color-white-bg: #e5e5e5;
+  --color-white: #fff;
   --color-button-enabled: #36b37f;
   --color-button-pressed: #008552;
   --color-button-hover: rgba(54, 179, 127, 0.24);
@@ -26,7 +26,6 @@ html {
 body {
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
-
 }
 
 .header {
@@ -41,9 +40,7 @@ header {
   max-width: 800px;
   height: 5vh;
   min-height: 65px;
-
   background-color: var(--color-white-bg);
-
 }
 
 nav {
@@ -74,7 +71,7 @@ nav ul {
   background-color: var(--color-dark-blue);
 }
 
-/*----- MAIN SECTION -----*/
+/* ----- MAIN SECTION ----- */
 
 #main {
   background-color: var(--color-light-green);
@@ -85,13 +82,10 @@ nav ul {
 .main {
   max-width: 800px;
   max-height: 800px;
-
-
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
-
   background-image: url("./assets/img/header-bg-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -101,7 +95,6 @@ nav ul {
 
 .main h2 {
   margin-top: 20%;
-
   font-style: normal;
   font-weight: 700;
   font-size: 4rem;
@@ -117,13 +110,11 @@ nav ul {
 .main p {
   width: 85%;
   margin-top: 5%;
-
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
   line-height: 28px;
   text-align: center;
-
   color: var(--color-dark-blue);
 }
 
@@ -137,21 +128,18 @@ nav ul {
   width: 45%;
   padding-left: 0;
   margin: 5% 0 10% 0;
-
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-
   list-style: none;
 }
 
-.main__arrow-button{
+.main__arrow-button {
   width: 40px;
   height: 40px;
   margin: 14% 0;
   border-radius: 50%;
-
 }
 
 .main__arrow-button:hover {
