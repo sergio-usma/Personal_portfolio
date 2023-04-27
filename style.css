@@ -41,12 +41,9 @@ header {
   max-width: 1000px;
   height: 5vh;
   min-height: 60px;
-  background-color: var(--color-white);
-}
-
-header {
   display: flex;
   justify-content: flex-end;
+  background-color: var(--color-white);
 }
 
 header ul {
@@ -144,5 +141,5 @@ header ul {
 }
 
 .main__arrow-button:hover {
-  box-shadow: var(--color-button-hover) 1px 0 0 2px;
+  box-shadow: var(--color-button-hover) 0 0 0 0;
 }
