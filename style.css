@@ -96,7 +96,6 @@ header ul {
 .main {
   width: 100vw;
   max-width: 1440px;
-  max-height: 120vh; /*ATTENTION HERE*/
   margin: auto;
 
   display: flex;
@@ -112,7 +111,7 @@ header ul {
 }
 
 .main h1 {
-  margin-top: 16%;
+  margin-top: 14%;
 
 
   font-style: normal;
@@ -135,9 +134,10 @@ header ul {
 }
 
 .main p {
-  width: 65%;
+  width: 70%;
   min-width: 300px;
   margin-top: 5%;
+
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
@@ -168,7 +168,7 @@ header ul {
 .main__arrow-button {
   width: 40px;
   height: 40px;
-  margin: 14% 0;
+  margin: 0 auto 10% auto;
   border-radius: 50%;
 }
 
@@ -207,7 +207,7 @@ header ul {
   }
 
   header ul {
-    width: 255px;
+    width: 240px;
 
     display: flex;
     justify-content: space-between;
@@ -238,8 +238,18 @@ header ul {
     display: none;
   }
 
+  .main p {
+    width: 60%;
+    max-width: 770px;
+    margin-top: 2%;
+  }
   .main__social-media {
-    width: 50%;
+    width: 40%;
+  }
+
+  .main__arrow-button {
+    margin: 0 auto 10% auto;
+    border-radius: 50%;
   }
 
 }
