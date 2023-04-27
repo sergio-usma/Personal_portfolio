@@ -1,0 +1,142 @@
+:root {
+  --color-main_theme: #36b37e;
+  --color-second_green: #c5e9da;
+  --color-light-green: #ebf0ee;
+  --color-dark-blue: #172b4d;
+  --color-white-bg: #e5e5e5;
+  --color-white: #fff;
+  --color-button-enabled: #36b37f;
+  --color-button-pressed: #008552;
+  --color-button-hover: rgba(54, 179, 127, 0.24);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  width: 100vw;
+  max-width: 1000px;
+  height: 5vh;
+  min-height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--color-white);
+}
+
+header ul {
+  list-style: none;
+  display: none;
+}
+
+.burger {
+  display: flex;
+  width: 18px;
+  height: 12px;
+  margin-top: 25px;
+  margin-right: 3rem;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.burger-line {
+  border-radius: 20px;
+  height: 2px;
+  background-color: var(--color-dark-blue);
+}
+
+/* ----- MAIN SECTION ----- */
+
+#main {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  max-width: 1000px;
+  max-height: 120vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("./assets/img/header-bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-color: var(--color-white);
+}
+
+.main h1 {
+  margin-top: 16%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 52px;
+  text-align: center;
+  color: var(--color-dark-blue);
+}
+
+.main h1 span {
+  color: var(--color-main_theme);
+}
+
+.main p {
+  width: 85%;
+  margin-top: 5%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 28px;
+  text-align: center;
+  color: var(--color-dark-blue);
+}
+
+.main__social-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main__social-media ul {
+  width: 45%;
+  padding-left: 0;
+  margin: 5% 0 10% 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.main__arrow-button {
+  width: 40px;
+  height: 40px;
+  margin: 14% 0;
+  border-radius: 50%;
+}
+
+.main__arrow-button:hover {
+  box-shadow: var(--color-button-hover) 0 0 0 0;
+}
