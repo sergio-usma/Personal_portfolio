@@ -63,7 +63,7 @@ In this project was only used HTML and CSS. More technologies Coming soon.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- If you want to see a preview from the project go an [click here!](https://sergio-usma.github.io/Personal_portfolio/)
+- If you want to see a preview from the project go and [click here!](https://sergio-usma.github.io/Personal_portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
