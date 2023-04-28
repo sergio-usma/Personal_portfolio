@@ -187,7 +187,6 @@ p,
 .projects {
   width: 100vw;
   max-width: var(--sections-max-width);
-
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
@@ -221,7 +220,6 @@ h2,
   max-width: 1080px;
   margin-bottom: 30px;
   display: grid;
-
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
   row-gap: 32px;
@@ -269,7 +267,6 @@ h3,
 .project__card__tags,
 .tags {
   width: 100%;
-
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -327,7 +324,6 @@ button a {
 
 .about-me {
   width: 100vw;
-
   max-width: var(--sections-max-width);
 
   /* min-height: 720px; */
@@ -348,8 +344,8 @@ button a {
   align-items: center;
   align-content: space-around;
   justify-content: center;
-
-  background-image: url("./assets/img/about-left-mobile.svg"),
+  background-image:
+    url("./assets/img/about-left-mobile.svg"),
     url("./assets/img/about-right-mobile.svg");
   background-repeat: no-repeat;
   background-size: 17%, 17%;
@@ -369,13 +365,12 @@ button a {
   height: 316px;
   width: 327px;
   border-radius: 8px;
-
   display: flex;
   flex-direction: column;
-  /*justify-content: center;*/
+
+  /* justify-content: center; */
 
   background: #ebf0ee;
-
   border: 1px solid #c1c7d0;
 }
 
@@ -391,18 +386,17 @@ button a {
   width: 80px;
   margin: 40px auto 28px auto;
   border-radius: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background: #ffffff;
+  background: #fff;
   box-shadow: 0 16px 24px rgba(37, 47, 137, 0.08);
 }
 
 .about-me__icon__holder img {
-  /*height: 0%;*/
-  /*width: 10%;*/
+  /* height: 0%; */
+
+  /* width: 10%; */
 }
 
 .about-me__card__title {
@@ -417,8 +411,7 @@ button a {
 
 .about-me__card__tags li {
   height: 40px;
-
-  background: #ffffff;
+  background: #fff;
   border-radius: 8px;
   color: #36b37e;
 }
@@ -539,7 +532,7 @@ button a {
 
 @media screen and (min-width: 1180px) {
   .main {
-    /*max-width: 1800px;*/
+    /* max-width: 1800px; */
     height: 1407px;
   }
 
@@ -572,7 +565,8 @@ button a {
   }
 
   .about-me__container {
-    background-image: url("./assets/img/about-left-desktop.svg"),
+    background-image:
+      url("./assets/img/about-left-desktop.svg"),
       url("./assets/img/about-right-desktop.svg");
     background-repeat: no-repeat;
     background-size: 17%, 17%;

@@ -135,11 +135,8 @@ You can deploy this project using your preferred deployment method.
 
 These are the coming soon features for this project:
 
-1. [ ] Recent works and projects.
-2. [ ] "About me" section.
-3. [ ] Languages, frameworks and skills section.
-4. [ ] Contact form & footer sections.
-5. [ ] Responsive design for tablets and desktop.
+1. [ ] Contact form & footer sections.
+2. [ ] Responsive design for tablets and desktop.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
