@@ -487,7 +487,7 @@ button a {
   }
 
   .about-me__description {
-    width: 66vw;
+    width: 68vw;
   }
 
   .skills {
@@ -521,6 +521,15 @@ button a {
 
   .main__arrow-button {
     margin-top: 15%;
+  }
+
+  .about-me__container {
+    background-image:
+      url("./assets/img/about-left-desktop.svg"),
+      url("./assets/img/about-right-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 17%, 17%;
+    background-position: bottom left, top right;
   }
 }
 
@@ -562,15 +571,6 @@ button a {
 
   .main__arrow-button {
     margin-top: 12%;
-  }
-
-  .about-me__container {
-    background-image:
-      url("./assets/img/about-left-desktop.svg"),
-      url("./assets/img/about-right-desktop.svg");
-    background-repeat: no-repeat;
-    background-size: 17%, 17%;
-    background-position: bottom left, top right;
   }
 
   .skills {
