@@ -12,7 +12,8 @@
   --color-button-enabled: #36b37f;
   --color-button-pressed: #008552;
   --color-button-hover: rgba(54, 179, 127, 0.24);
-  --sections-max-width: 100vw;
+  --sections-max-width: 2160px;
+  --wrapper-max-width: 1280px;
   --html-test-background: white;
 }
 
@@ -98,7 +99,7 @@ header ul {
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
-  background-image: url("./assets/img/header-bg-mobile.svg");
+  background-image: url("./assets/fig/header-bg-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -197,6 +198,7 @@ p,
 
 h2,
 .projects__title {
+  max-width: 463px;
   margin: 7% auto 3% auto;
   font-style: normal;
   font-weight: 700;
@@ -217,7 +219,7 @@ h2,
 .projects__wrapper,
 .wrapper {
   width: 100vw;
-  max-width: 1080px;
+  max-width: var(--wrapper-max-width);
   margin-bottom: 30px;
   display: grid;
   place-items: center;
@@ -318,7 +320,7 @@ button a {
 
 /* ----- ABOUT ME SECTION ----- */
 
-#about-me {
+#about {
   background-color: var(--html-test-background);
 }
 
@@ -344,9 +346,8 @@ button a {
   align-items: center;
   align-content: space-around;
   justify-content: center;
-  background-image:
-    url("./assets/img/about-left-mobile.svg"),
-    url("./assets/img/about-right-mobile.svg");
+  background-image: url("./assets/fig/about-left-mobile.svg"),
+    url("./assets/fig/about-right-mobile.svg");
   background-repeat: no-repeat;
   background-size: 17%, 17%;
   background-position: bottom left, top right;
@@ -416,6 +417,107 @@ button a {
   color: #36b37e;
 }
 
+/* ----- CONTACT SECTION ----- */
+
+#contact {
+  /*background-color: var(--html-test-background);*/
+  background-color: purple;
+}
+
+.contact {
+  background-color: white;
+
+  max-width: var(--sections-max-width);
+  margin: 4% auto 0 auto;
+
+  background-image: url("./assets/fig/contact-right-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 17%;
+  background-position: bottom right;
+}
+
+.contact__container {
+  max-width: calc(var(--wrapper-max-width) + 10vw);
+  margin: auto;
+  padding: 0 2%;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+}
+
+.contact__container h2{
+  margin-bottom: 5%;
+}
+
+.contact__form {
+    width: 90%;
+  max-width: 684px;
+
+  display: grid;
+  /*grid-template-columns: 1fr 1fr;*/
+  grid-template-areas:"name" "lastname" "email" "message" "button__form";
+  gap: 24px;
+
+}
+
+.name{
+  grid-area:name ;
+}
+
+.lastname{
+  grid-area: lastname;
+}
+
+.email{
+  grid-area:email ;
+}
+
+.message{
+  grid-area: message;
+
+}
+
+.button__form{
+  grid-area: button__form ;
+  margin-bottom: 15%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  height: 48px;
+  padding-left: 16px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid #d0d9d4;
+  resize: none;
+}
+
+textarea {
+  width: 100%;
+  height: 114px;
+  padding: 12px;
+  font-style: normal;
+
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid #d0d9d4;
+  resize: none;
+}
+
+label {
+  display: none;
+}
+
 /* -------------------------------------------- */
 
 /* ---------- MEDIA QUERY AT 600px ---------- */
@@ -459,7 +561,7 @@ button a {
     min-height: 720px;
     max-height: 1180px;
     justify-content: center;
-    background-image: url("./assets/img/header-bg-desktop.svg");
+    background-image: url("./assets/fig/header-bg-desktop.svg");
   }
 
   .span__br {
@@ -493,6 +595,21 @@ button a {
   .skills {
     grid-area: 2/1/3/3;
   }
+
+  .contact__container h2 {
+    margin: 3% 0;
+  }
+
+  .contact__form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+  "name lastname"
+  "email email"
+  "message message"
+  "button__form button__form";
+    gap: 24px;
+
+  }
 }
 
 /* -------------------------------------------- */
@@ -524,12 +641,21 @@ button a {
   }
 
   .about-me__container {
-    background-image:
-      url("./assets/img/about-left-desktop.svg"),
-      url("./assets/img/about-right-desktop.svg");
+    background-image: url("./assets/fig/about-left-desktop.svg"),
+      url("./assets/fig/about-right-desktop.svg");
     background-repeat: no-repeat;
     background-size: 17%, 17%;
     background-position: bottom left, top right;
+  }
+
+  .contact {
+    min-height: 600px;
+    background-image: url("./assets/fig/contact-right-desktop.svg"),
+      url("./assets/fig/contact-left-desktop-1.svg"),
+      url("./assets/fig/contact-left-desktop-2.svg");
+    background-repeat: no-repeat;
+    background-size: 10%, 10%, 10%;
+    background-position: bottom right, bottom left, 15% bottom;
   }
 }
 
@@ -575,5 +701,34 @@ button a {
 
   .skills {
     grid-area: auto;
+  }
+
+  .contact__container h2 {
+    font-size: 3rem;
+  }
+
+  article{
+    transform: scale(1.1);
+    margin: 6% 0;
+  }
+.wrapper{
+  width: 90vw;
+}
+
+  .about-me__wrapper{
+    width:96vw;
+  }
+
+}
+
+/* -------------------------------------------- */
+
+/* ---------- MEDIA QUERY AT 1920px ---------- */
+
+/* -------------------------------------------- */
+
+@media screen and (min-width: 1920px) {
+  .main__container {
+    transform: translateY(0%);
   }
 }
