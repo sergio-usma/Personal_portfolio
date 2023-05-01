@@ -273,7 +273,7 @@ h3,
   flex-flow: row wrap;
   justify-content: space-between;
   list-style: none;
-  float: left;
+  float: right;
 }
 
 .project__card__tags li,
