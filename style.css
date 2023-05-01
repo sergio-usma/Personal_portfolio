@@ -273,7 +273,7 @@ h3,
   flex-flow: row wrap;
   justify-content: space-between;
   list-style: none;
-  float: right;
+  float: left;
 }
 
 .project__card__tags li,
@@ -346,7 +346,8 @@ button a {
   align-items: center;
   align-content: space-around;
   justify-content: center;
-  background-image: url("./assets/fig/about-left-mobile.svg"),
+  background-image:
+    url("./assets/fig/about-left-mobile.svg"),
     url("./assets/fig/about-right-mobile.svg");
   background-repeat: no-repeat;
   background-size: 17%, 17%;
@@ -420,16 +421,14 @@ button a {
 /* ----- CONTACT SECTION ----- */
 
 #contact {
-  /*background-color: var(--html-test-background);*/
+  /* background-color: var(--html-test-background); */
   background-color: purple;
 }
 
 .contact {
   background-color: white;
-
   max-width: var(--sections-max-width);
   margin: 4% auto 0 auto;
-
   background-image: url("./assets/fig/contact-right-mobile.svg");
   background-repeat: no-repeat;
   background-size: 17%;
@@ -440,7 +439,6 @@ button a {
   max-width: calc(var(--wrapper-max-width) + 10vw);
   margin: auto;
   padding: 0 2%;
-
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
@@ -448,40 +446,38 @@ button a {
   gap: 24px;
 }
 
-.contact__container h2{
+.contact__container h2 {
   margin-bottom: 5%;
 }
 
 .contact__form {
-    width: 90%;
+  width: 90%;
   max-width: 684px;
-
   display: grid;
-  /*grid-template-columns: 1fr 1fr;*/
-  grid-template-areas:"name" "lastname" "email" "message" "button__form";
+
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-areas: "name" "lastname" "email" "message" "button__form";
   gap: 24px;
-
 }
 
-.name{
-  grid-area:name ;
+.name {
+  grid-area: name;
 }
 
-.lastname{
+.lastname {
   grid-area: lastname;
 }
 
-.email{
-  grid-area:email ;
+.email {
+  grid-area: email;
 }
 
-.message{
+.message {
   grid-area: message;
-
 }
 
-.button__form{
-  grid-area: button__form ;
+.button__form {
+  grid-area: button__form;
   margin-bottom: 15%;
 }
 
@@ -495,9 +491,8 @@ textarea {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-
   border-radius: 4px;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #d0d9d4;
   resize: none;
 }
@@ -507,9 +502,8 @@ textarea {
   height: 114px;
   padding: 12px;
   font-style: normal;
-
   border-radius: 4px;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #d0d9d4;
   resize: none;
 }
@@ -603,12 +597,11 @@ label {
   .contact__form {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-  "name lastname"
-  "email email"
-  "message message"
-  "button__form button__form";
+      "name lastname"
+      "email email"
+      "message message"
+      "button__form button__form";
     gap: 24px;
-
   }
 }
 
@@ -641,7 +634,8 @@ label {
   }
 
   .about-me__container {
-    background-image: url("./assets/fig/about-left-desktop.svg"),
+    background-image:
+      url("./assets/fig/about-left-desktop.svg"),
       url("./assets/fig/about-right-desktop.svg");
     background-repeat: no-repeat;
     background-size: 17%, 17%;
@@ -650,7 +644,8 @@ label {
 
   .contact {
     min-height: 600px;
-    background-image: url("./assets/fig/contact-right-desktop.svg"),
+    background-image:
+      url("./assets/fig/contact-right-desktop.svg"),
       url("./assets/fig/contact-left-desktop-1.svg"),
       url("./assets/fig/contact-left-desktop-2.svg");
     background-repeat: no-repeat;
@@ -707,18 +702,18 @@ label {
     font-size: 3rem;
   }
 
-  article{
+  article {
     transform: scale(1.1);
     margin: 6% 0;
   }
-.wrapper{
-  width: 90vw;
-}
 
-  .about-me__wrapper{
-    width:96vw;
+  .wrapper {
+    width: 90vw;
   }
 
+  .about-me__wrapper {
+    width: 96vw;
+  }
 }
 
 /* -------------------------------------------- */
