@@ -421,7 +421,7 @@ button a {
 /* ----- CONTACT SECTION ----- */
 
 #contact {
-   background-color: var(--html-test-background);
+  background-color: var(--html-test-background);
 }
 
 .contact {
@@ -530,7 +530,7 @@ label {
 /* ----- FOOTER SECTION ----- */
 
 footer {
-   background-color: var(--html-test-background);
+  background-color: var(--html-test-background);
 }
 
 .footer {
@@ -545,8 +545,6 @@ footer {
 .footer__social-media ul {
   margin: 0;
 }
-
-
 
 /* -------------------------------------------- */
 
