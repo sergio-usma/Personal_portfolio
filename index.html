@@ -338,49 +338,49 @@
             like to chat please get in touch.
           </h2>
 
-            <form
-              class="contact__form"
-              action="https://formspree.io/f/xknaqawg"
-              method="POST"
-            >
-              <div class="contact__form__element name">
-                <label class="label" for="name">Full name:</label>
+          <form
+            class="contact__form"
+            action="https://formspree.io/f/xknaqawg"
+            method="POST"
+          >
+            <ul>
+              <li class="contact__form__element full-name">
+                <label class="label" for="full-name">Full name:</label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="full-name"
+                  name="full-name"
                   placeholder="Full name"
+                  maxlength="50"
+                  required
+                />
+              </li>
+
+              <li class="contact__form__element name">
+                <label class="label" for="firstname">First name:</label>
+                <input
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="First name"
                   maxlength="30"
                   required
                 />
-              </div>
+              </li>
 
-              <div class="contact__form__element lastname">
-                <label class="label" for="firstname">First name:</label>
-                <input
-                        type="text"
-                        id="firstname"
-                        name="firstname"
-                        placeholder="First name"
-                        maxlength="30"
-                        required
-                />
-              </div>
-
-              <div class="contact__form__element lastname">
+              <li class="contact__form__element lastname">
                 <label class="label" for="lastname">Last name:</label>
                 <input
-                        type="text"
-                        id="lastname"
-                        name="lastname"
-                        placeholder="Last Name"
-                        maxlength="30"
-                        required
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Last Name"
+                  maxlength="30"
+                  required
                 />
-              </div>
+              </li>
 
-
-              <div class="contact__form__element email">
+              <li class="contact__form__element email">
                 <label class="label" for="email">Email address:</label>
                 <input
                   type="email"
@@ -389,26 +389,66 @@
                   placeholder="Email address"
                   required
                 />
-              </div>
+              </li>
 
-              <div class="contact__form__element message" >
+              <li class="contact__form__element message">
                 <label class="label" for="message">Your message:</label>
                 <textarea
                   id="message"
                   name="message"
                   placeholder="Hey I'd like to connect to..."
-                  required
                   maxlength="500"
+                  required
                 ></textarea>
-              </div>
+              </li>
 
-              <div class="button__form button">
+              <li class="button__form button">
                 <button type="submit"><a href="">Get in touch</a></button>
-              </div>
-            </form>
-          </div>
+              </li>
+            </ul>
+          </form>
+
+          <p class="contact__container__email">myemailhere@email.com</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+
+
+        <div class="main__social-media footer__social-media">
+          <ul>
+            <li>
+              <a href="https://twitter.com/VonUsma"
+                ><img src="./assets/ico/twitter.png" alt="Twitter logo"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/sergiousma/"
+                ><img src="./assets/ico/linkedin.png" alt="LinkedIn logo"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/ico/medium.png" alt="Medium logo"
+              /></a>
+            </li>
+            <li>
+              <a href="https://github.com/sergio-usma"
+                ><img src="./assets/ico/github.png" alt="GitHub logo"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/ico/angellist.png" alt="AngelList logo"
+              /></a>
+            </li>
+          </ul>
         </div>
 
-    </section>
+
+      </div>
+    </footer>
   </body>
 </html>

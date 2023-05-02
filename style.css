@@ -453,19 +453,29 @@ button a {
 .contact__form {
   width: 90%;
   max-width: 684px;
-  display: grid;
+}
 
-  /* grid-template-columns: 1fr 1fr; */
-  grid-template-areas: "name" "lastname" "email" "message" "button__form";
+.contact__form ul {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "full-name" "email" "message" "button__form";
   gap: 24px;
+  list-style: none;
+}
+
+.full-name {
+  grid-area: full-name;
 }
 
 .name {
   grid-area: name;
+  display: none;
 }
 
 .lastname {
   grid-area: lastname;
+  display: none;
 }
 
 .email {
@@ -478,7 +488,9 @@ button a {
 
 .button__form {
   grid-area: button__form;
-  margin-bottom: 15%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
 }
 
 input[type="text"],
@@ -511,6 +523,31 @@ textarea {
 label {
   display: none;
 }
+
+.contact__container__email {
+  margin: 0 auto 8% auto;
+}
+
+/* ----- FOOTER SECTION ----- */
+
+footer {
+  /* background-color: var(--html-test-background); */
+}
+
+.footer {
+  max-width: var(--sections-max-width);
+  height: 72px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__social-media ul {
+  margin: 0;
+}
+
+
 
 /* -------------------------------------------- */
 
@@ -594,7 +631,7 @@ label {
     margin: 3% 0;
   }
 
-  .contact__form {
+  .contact__form ul {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "name lastname"
@@ -602,6 +639,31 @@ label {
       "message message"
       "button__form button__form";
     gap: 24px;
+    list-style: none;
+  }
+
+  .full-name {
+    grid-area: full-name;
+    display: none;
+  }
+
+  .name {
+    grid-area: name;
+    display: block;
+  }
+
+  .lastname {
+    grid-area: lastname;
+    display: block;
+  }
+
+  .button__form {
+    justify-content: flex-start;
+    margin-bottom: 15%;
+  }
+
+  .contact__container__email {
+    display: none;
   }
 }
 
