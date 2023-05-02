@@ -303,12 +303,15 @@ button,
   border-radius: 4px;
 }
 
-button:hover,
-.project__card__button:hover {
+button:hover{
   box-shadow: 0 8px 16px var(--color-button-hover);
 }
 
-button a {
+button:active{
+  background:var(--color-button-pressed);
+}
+
+button, button a{
   margin: 0 12px;
   text-decoration: none;
   font-style: normal;
@@ -485,11 +488,14 @@ button a {
   grid-area: message;
 }
 
-.button__form {
+button[type="submit"] {
   grid-area: button__form;
   display: flex;
   justify-content: center;
-  margin-bottom: 0;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 12px;
+  cursor: pointer;
 }
 
 input[type="text"],
@@ -654,9 +660,9 @@ footer {
     display: block;
   }
 
-  .button__form {
+  button[type="submit"] {
     justify-content: flex-start;
-    margin-bottom: 15%;
+    margin: 0 auto 15% 0;
   }
 
   .contact__container__email {
