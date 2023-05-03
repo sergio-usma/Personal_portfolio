@@ -19,8 +19,8 @@
       <div class="header">
         <ul>
           <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
 
         <nav class="burger">
@@ -246,7 +246,7 @@
 
     <!------- ABOUT ME SECTION ------->
 
-    <section id="about-me">
+    <section id="about">
       <div class="about-me">
         <div class="about-me__container">
           <h2>About me</h2>
@@ -267,7 +267,11 @@
           <article class="about-me__card__container languages">
             <div class="about-me__languages">
               <div class="about-me__icon__holder">
-                <img src="./assets/ico/languages.svg" alt="World black and green vectorized icon" srcset="" />
+                <img
+                  src="./assets/ico/languages.svg"
+                  alt="World black and green vectorized icon"
+                  srcset=""
+                />
               </div>
               <h3 class="about-me__card__title">Languages</h3>
 
@@ -283,7 +287,11 @@
           <article class="about-me__card__container frameworks">
             <div class="about-me__languages">
               <div class="about-me__icon__holder">
-                <img src="./assets/ico/frameworks.svg" alt="Five black and green boxes creating a network" srcset="" />
+                <img
+                  src="./assets/ico/frameworks.svg"
+                  alt="Five black and green boxes creating a network"
+                  srcset=""
+                />
               </div>
               <h3 class="about-me__card__title">Frameworks</h3>
 
@@ -300,7 +308,11 @@
           <article class="about-me__card__container skills">
             <div class="about-me__languages">
               <div class="about-me__icon__holder">
-                <img src="./assets/ico/skills.svg" alt="Three lighting symbols in green color forming an icon" srcset="" />
+                <img
+                  src="./assets/ico/skills.svg"
+                  alt="Three lighting symbols in green color forming an icon"
+                  srcset=""
+                />
               </div>
               <h3 class="about-me__card__title">Skills</h3>
 
@@ -316,5 +328,123 @@
         </div>
       </div>
     </section>
+
+    <!-------CONTACT SECTION ------->
+    <section id="contact">
+      <div class="contact">
+        <div class="contact__container">
+          <h2>
+            I'm always interested in hearing about new projects, so if you'd
+            like to chat please get in touch.
+          </h2>
+
+          <form
+            class="contact__form"
+            action="https://formspree.io/f/xknaqawg"
+            method="POST"
+          >
+            <ul>
+              <li class="contact__form__element full-name">
+                <label class="label" for="full-name">Full name:</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  placeholder="Full name"
+                  maxlength="30"
+                  required
+                />
+              </li>
+
+<!--              <li class="contact__form__element name">
+                <label class="label" for="firstname">First name:</label>
+                <input
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="First name"
+                  maxlength="30"
+                  pattern="[a-zA-Z]+"
+                />
+              </li>
+
+              <li class="contact__form__element lastname">
+                <label class="label" for="lastname">Last name:</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Last Name"
+                  maxlength="30"
+                  pattern="[a-zA-Z]+"
+                />
+              </li>-->
+
+              <li class="contact__form__element email">
+                <label class="label" for="email">Email address:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email address"
+                  required
+                />
+              </li>
+
+              <li class="contact__form__element message">
+                <label class="label" for="message">Your message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Hey I'd like to connect to..."
+                  maxlength="500"
+                  required
+                ></textarea>
+              </li>
+            </ul>
+
+              <button type="submit">
+                Get in touch!
+              </button>
+          </form>
+
+          <p class="contact__container__email">myemailhere@email.com</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div class="main__social-media footer__social-media">
+          <ul>
+            <li>
+              <a href="https://twitter.com/VonUsma"
+                ><img src="./assets/ico/twitter.png" alt="Twitter logo"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/sergiousma/"
+                ><img src="./assets/ico/linkedin.png" alt="LinkedIn logo"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/ico/medium.png" alt="Medium logo"
+              /></a>
+            </li>
+            <li>
+              <a href="https://github.com/sergio-usma"
+                ><img src="./assets/ico/github.png" alt="GitHub logo"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/ico/angellist.png" alt="AngelList logo"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
