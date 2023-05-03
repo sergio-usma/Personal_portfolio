@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
     <title>Sergio Usma's portfolio</title>
   </head>
   <body>
@@ -339,12 +340,12 @@
           </h2>
 
           <form
-            class="contact__form"
+            class="contact__form mobile__form"
             action="https://formspree.io/f/xknaqawg"
             method="POST"
           >
             <ul>
-              <li class="contact__form__element full-name">
+              <li class="contact__form__element full-name required-mobile">
                 <label class="label" for="full-name">Full name:</label>
                 <input
                   type="text"
@@ -356,35 +357,11 @@
                 />
               </li>
 
-<!--              <li class="contact__form__element name">
-                <label class="label" for="firstname">First name:</label>
-                <input
-                  type="text"
-                  id="firstname"
-                  name="firstname"
-                  placeholder="First name"
-                  maxlength="30"
-                  pattern="[a-zA-Z]+"
-                />
-              </li>
-
-              <li class="contact__form__element lastname">
-                <label class="label" for="lastname">Last name:</label>
-                <input
-                  type="text"
-                  id="lastname"
-                  name="lastname"
-                  placeholder="Last Name"
-                  maxlength="30"
-                  pattern="[a-zA-Z]+"
-                />
-              </li>-->
-
               <li class="contact__form__element email">
-                <label class="label" for="email">Email address:</label>
+                <label class="label" for="email-mobile">Email address:</label>
                 <input
                   type="email"
-                  id="email"
+                  id="email-mobile"
                   name="email"
                   placeholder="Email address"
                   required
@@ -392,9 +369,9 @@
               </li>
 
               <li class="contact__form__element message">
-                <label class="label" for="message">Your message:</label>
+                <label class="label" for="message-mobile">Your message:</label>
                 <textarea
-                  id="message"
+                  id="message-mobile"
                   name="message"
                   placeholder="Hey I'd like to connect to..."
                   maxlength="500"
@@ -406,6 +383,67 @@
               <button type="submit">
                 Get in touch!
               </button>
+          </form>
+
+          <form
+                  class="contact__form desktop__form"
+                  action="https://formspree.io/f/xknaqawg"
+                  method="POST"
+          >
+            <ul>
+
+              <li class="contact__form__element name">
+                <label class="label" for="firstname">First name:</label>
+                <input
+                        type="text"
+                        id="firstname"
+                        name="firstname"
+                        placeholder="First name"
+                        maxlength="30"
+                        pattern="[a-zA-Z]+"
+                        required
+                />
+              </li>
+
+              <li class="contact__form__element lastname">
+                <label class="label" for="lastname">Last name:</label>
+                <input
+                        type="text"
+                        id="lastname"
+                        name="lastname"
+                        placeholder="Last Name"
+                        maxlength="30"
+                        pattern="[a-zA-Z]+"
+                        required
+                />
+              </li>
+
+              <li class="contact__form__element email">
+                <label class="label" for="email">Email address:</label>
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Email address"
+                        required
+                />
+              </li>
+
+              <li class="contact__form__element message">
+                <label class="label" for="message">Your message:</label>
+                <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Hey I'd like to connect to..."
+                        maxlength="500"
+                        required
+                ></textarea>
+              </li>
+            </ul>
+
+            <button type="submit">
+              Get in touch!
+            </button>
           </form>
 
           <p class="contact__container__email">myemailhere@email.com</p>
