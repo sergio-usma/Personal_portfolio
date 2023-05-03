@@ -204,7 +204,7 @@ h2,
   font-weight: 700;
   font-size: 4rem;
   line-height: 5.2rem;
-  color: var(--color-card-text);
+  color: var(--color-dark-blue);
   text-align: center;
 }
 
@@ -303,15 +303,8 @@ button,
   border-radius: 4px;
 }
 
-button:hover{
-  box-shadow: 0 8px 16px var(--color-button-hover);
-}
-
-button:active{
-  background:var(--color-button-pressed);
-}
-
-button, button a{
+button,
+button a {
   margin: 0 12px;
   text-decoration: none;
   font-style: normal;
@@ -319,6 +312,14 @@ button, button a{
   font-size: 17px;
   line-height: 24px;
   color: var(--color-white);
+}
+
+button:hover {
+  box-shadow: 0 8px 16px var(--color-button-hover);
+}
+
+button:active {
+  background: var(--color-button-pressed);
 }
 
 /* ----- ABOUT ME SECTION ----- */
