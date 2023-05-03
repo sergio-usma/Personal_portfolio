@@ -453,6 +453,10 @@ button:active {
   margin-bottom: 5%;
 }
 
+.desktop__form {
+  display: none;
+}
+
 .contact__form {
   width: 90%;
   max-width: 684px;
@@ -633,6 +637,14 @@ footer {
 
   .contact__container h2 {
     margin: 3% 0;
+  }
+
+  .mobile__form {
+    display: none;
+  }
+
+  .desktop__form {
+    display: block;
   }
 
   .contact__form ul {
