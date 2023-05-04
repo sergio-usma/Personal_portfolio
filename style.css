@@ -746,6 +746,18 @@ footer {
 
   .main__container {
     transform: translateY(-20%);
+    animation-name: introin;
+    animation-duration: 1s;
+  }
+
+  @keyframes introin {
+    from {
+      margin-bottom: 100%;
+    }
+
+    to {
+      margin-bottom: 15%;
+    }
   }
 
   .main h1,
