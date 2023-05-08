@@ -111,7 +111,7 @@ Test don't required.
 
 ### Deployment
 
-You can deploy this project using your preferred deployment method.
+You can deploy this project using your preferred deployment method. However we recommend using GitHub Pages link given in the project's description or in the Live Demo section.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -137,7 +137,7 @@ These are the coming soon features for this project:
 
 1. [ ] Full desktop version.
 2. [ ] Projects section sub-pages.
-3. [ ] Button and menu functionalities.
+3. [ ] Button and menu functionalities using JS.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
