@@ -39,6 +39,8 @@
 
 **Personal_portfolio** is a project that consists of building a personal portfolio site. This project is part of the Microverse curriculum. In this first part, the project is built using only HTML and CSS. In the future, more technologies will be added. Besides, includes a README file with the project description and two sections: one with the navigation bar, and another with author's name and links to the author's social networks.
 
+[Click here](https://www.loom.com/share/ab6809d556574bbcb8ec807e629eb4e0) to see the presentation video
+
 ## 🛠 Built With <a name="built-with"></a>
 
 - HTML
