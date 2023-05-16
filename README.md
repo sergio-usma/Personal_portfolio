@@ -45,6 +45,7 @@
 
 - HTML
 - CSS
+- JavScript
 - Linters
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -57,6 +58,8 @@ In this project was only used HTML and CSS. More technologies Coming soon.
 
 - **Semantic HTML**
 - **CSS**
+- **Responsive Design**
+- **Use of DOM**
 - **Use of Linters**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -137,9 +140,8 @@ You can deploy this project using your preferred deployment method. However we r
 
 These are the coming soon features for this project:
 
-1. [ ] Full desktop version.
-2. [ ] Projects section sub-pages.
-3. [ ] Button and menu functionalities using JS.
+1. [ ] Projects section pop-ups.
+2. [ ] Full features mobile & desktop version.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

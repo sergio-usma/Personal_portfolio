@@ -44,8 +44,10 @@ body {
 }
 
 /* ----- HEADER SECTION ----- */
-/*-------------------------------*/
-/*-------------------------------*/
+
+/* ------------------------------- */
+
+/* ------------------------------- */
 
 header {
   /* background-color: purple; */
@@ -86,10 +88,11 @@ header ul {
   background-color: var(--color-dark-blue);
 }
 
-/*-------------------------------*/
-/*-------------------------------*/
+/* ------------------------------- */
 
-.header-active{
+/* ------------------------------- */
+
+.header-active {
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -98,26 +101,18 @@ header ul {
   background: var(--color-white);
 }
 
-.header-active ul{
+.header-active ul {
   height: 250px;
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content:space-between ;
+  justify-content: space-between;
   padding-top: 70px;
   padding-left: 10%;
   list-style: none;
 }
 
-.header-active ul li a{
-  font-weight: 600;
-  font-size: 3.2rem;
-  line-height: 4.4rem;
-  text-decoration: none;
-  color: var(--color-card-text);
-}
-
-.burger-active{
+.burger-active {
   width: 18px;
   height: 18px;
   margin-top: 25px;
@@ -130,7 +125,7 @@ header ul {
   cursor: pointer;
 }
 
-.burger-active .top{
+.burger-active .top {
   border-radius: 20px;
   height: 2px;
   background-color: var(--color-dark-blue);
@@ -138,17 +133,13 @@ header ul {
   transition: all 0.3s ease;
 }
 
-.burger-active .bot{
+.burger-active .bot {
   border-radius: 20px;
   height: 2px;
   background-color: var(--color-dark-blue);
-  transform: rotate(-45deg) translateY(-8px) ;
+  transform: rotate(-45deg) translateY(-8px);
   transition: all 0.3s ease;
 }
-/*-------------------------------*/
-/*-------------------------------*/
-
-
 
 /* ----- MAIN SECTION ----- */
 
@@ -386,6 +377,14 @@ button:hover {
 
 button:active {
   background: var(--color-button-pressed);
+}
+
+.header-active ul li a {
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 4.4rem;
+  text-decoration: none;
+  color: var(--color-card-text);
 }
 
 /* ----- ABOUT ME SECTION ----- */
@@ -643,7 +642,7 @@ footer {
     background-color: transparent;
   }
 
-  .header-active{
+  .header-active {
     display: none;
   }
 
@@ -662,7 +661,8 @@ footer {
     color: var(--color-nav-text);
   }
 
-  .burger, .burger-active {
+  .burger,
+  .burger-active {
     display: none;
   }
 
