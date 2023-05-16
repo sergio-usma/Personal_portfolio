@@ -1,24 +1,28 @@
 // Dom  items
-const menu =  document.querySelectorAll('.menu');
-const burgerBtn =  document.querySelector('.burger');
-const navItem =  document.querySelectorAll('.nav-item')
-
+const header =  document.querySelector('#header');
+const burger =  document.querySelector('#burger');
+const body=document.querySelector("body")
 
 let  showMenu = false;
- burgerBtn.addEventListener('click', toggleMenu);
+ burger.addEventListener('click', toggleMenu);
 
  function toggleMenu() {
     if(!showMenu) {
-        burgerBtn.classList.add('close');
-        menu.classList.add('show');
-        navItem.forEach(item => item.classList('show'))
-       
+        header.classList.remove('header');
+        header.classList.add('header-active');
+        burger.classList.remove('burger');
+        burger.classList.add('burger-active');
+        document.body.style.overflowY = "hidden";
+
         // set  menu state
         showMenu = true;
     } else {
-        burgerBtn.classList.remove('close');
-        menu.classList.remove('show');
-        navItem.forEach(item => item.classList.remove('show'))
+        header.classList.remove('header-active');
+        header.classList.add('header');
+        burger.classList.remove('burger-active');
+        burger.classList.add('burger');
+        document.body.style.overflowY = "auto";
+
 
         //Set menu state
         showMenu = false;
