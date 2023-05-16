@@ -17,19 +17,19 @@
   <body>
     <!-------HEADER ------->
     <header>
-      <div class="header">
+      <nav id="header" class="header">
         <ul>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li  class="nav-item" onclick="toggleMenu()"><a href="#main">Portfolio</a></li>
+          <li  class="nav-item" onclick="toggleMenu()"><a href="#about">About</a></li>
+          <li  class="nav-item" onclick="toggleMenu()"><a href="#contact">Contact</a></li>
         </ul>
 
-        <nav class="burger">
-          <div class="burger-line top"></div>
-          <div class="burger-line mid"></div>
-          <div class="burger-line bot"></div>
-        </nav>
-      </div>
+        <div id="burger" class="burger">
+          <span class="bar top"></span>
+          <span class="bar mid"></span>
+          <span class="bar bot"></span>
+        </div>
+      </nav>
     </header>
 
     <!-------MAIN SECTION ------->
@@ -484,5 +484,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="main.js"></script>
   </body>
 </html>
