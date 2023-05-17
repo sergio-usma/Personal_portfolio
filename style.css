@@ -629,7 +629,7 @@ footer {
 /* -------------------------------------------- */
 
 @media screen and (min-width: 600px) {
-  #header {
+  header {
     position: relative;
   }
 
