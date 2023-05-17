@@ -350,6 +350,10 @@ h3,
   border-radius: 4px;
 }
 
+.project__card__text{
+  display: none;
+}
+
 button,
 .project__card__button {
   width: auto;
@@ -358,6 +362,7 @@ button,
   margin-top: 8px;
   background: var(--color-button-enabled);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 button,
@@ -386,6 +391,36 @@ button:active {
   text-decoration: none;
   color: var(--color-card-text);
 }
+
+/*PROJECTS POP-UP SECTION*/
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.popup-content {
+  width: 90vw;
+  max-width: 920px;
+  height: 94vh;
+  max-height: 1083px;
+  margin: 3vh auto;
+  padding: 20px;
+  text-align: center;
+
+  background: #FFFFFF;
+  border: 1px solid #DFE1E6;
+  border-radius: 16px;
+}
+
+
+
 
 /* ----- ABOUT ME SECTION ----- */
 

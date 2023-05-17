@@ -5,7 +5,7 @@ const burger = document.querySelector('#burger');
 let showMenu = false;
 
 function toggleMenu() {
-  if (!showMenu) {
+  if (!showMenu && window.innerWidth < 600) {
     header.classList.remove('header');
     header.classList.add('header-active');
     burger.classList.remove('burger');
@@ -26,3 +26,46 @@ function toggleMenu() {
   }
 }
 burger.addEventListener('click', toggleMenu);
+
+
+
+const cards = document.querySelectorAll('.project__card');
+const popup = document.getElementById('popup');
+const popupTitle = document.getElementById('popup-title');
+const popupDescription = document.getElementById('popup-description');
+const closeButton = document.getElementById('close-button');
+const cardArray = [];
+
+// Store card information in an array
+cards.forEach((card, index) => {
+  const cardInfo = {
+    title: card.querySelector('.project__card__title').textContent,
+    description: card.querySelector('.project__card__text').innerText,
+  };
+  cardArray.push(cardInfo);
+
+  card.querySelector('.project__card__button').addEventListener('click', () => {
+    openPopup(index);
+  });
+});
+
+// Open the popup and display card information
+function openPopup(index) {
+  const cardInfo = cardArray[index];
+  popupTitle.textContent = cardInfo.title;
+  popupDescription.textContent = cardInfo.description;
+  popup.style.display = 'block';
+}
+
+// Close the popup
+function closePopup() {
+  popup.style.display = 'none';
+}
+
+// Event listeners
+closeButton.addEventListener('click', closePopup);
+popup.addEventListener('click', (event) => {
+  if (event.target === popup) {
+    closePopup();
+  }
+});
