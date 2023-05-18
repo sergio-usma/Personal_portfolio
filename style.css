@@ -293,7 +293,7 @@ h2,
   border-radius: 8px;
 }
 
-.project__card__description {
+.project__card__wrapper {
   width: 327px;
   height: 222px;
   position: absolute;
@@ -310,7 +310,7 @@ h2,
   border-radius: 8px;
 }
 
-h3,
+h4,
 .project__card__title {
   width: 100%;
   height: 48px;
@@ -350,6 +350,14 @@ h3,
   border-radius: 4px;
 }
 
+.project__card__description{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-nav-text);
+}
+
 button,
 .project__card__button {
   width: auto;
@@ -362,6 +370,7 @@ button,
 
 button,
 button a {
+  padding: 0 5%;
   margin: 0 12px;
   text-decoration: none;
   font-style: normal;
@@ -369,6 +378,7 @@ button a {
   font-size: 17px;
   line-height: 24px;
   color: var(--color-white);
+  cursor: pointer;
 }
 
 button:hover {
@@ -386,6 +396,98 @@ button:active {
   text-decoration: none;
   color: var(--color-card-text);
 }
+
+/*---------------------------*/
+/*----- POPUP CREATION -----*/
+/*-------------------------*/
+
+
+.popup-active {
+  display: flex;
+  overflow: auto;
+  justify-content: center;
+}
+
+.projectPopup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-card-bg);
+  backdrop-filter: blur(3px);
+  z-index: 9999;
+}
+
+
+
+.project__popup{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-card-bg);
+  backdrop-filter: blur(3px);
+  z-index: 9999;
+}
+
+.project__popup__wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 100%;
+  background-color: var(--color-dark-blue);
+  padding: 2em 20px;
+  border-radius: 16px;
+  justify-content: space-between;
+  margin: 4vh 0;
+  height: max-content;
+}
+
+.project__popup__img{
+  width: 80vw;
+  height: 57vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  margin-top: 1.5em;
+  border-radius: 8px;
+  order: 1;
+}
+
+.project__popup__close{
+  margin: -3.5em 0;
+  width: 3em;
+  height: 3em;
+  background-color: var(--color-card-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 0.25em 0;
+}
+
+h3{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 4.4rem;
+  color: #172B4D;
+}
+
+
+/*---------------------------*/
+/*----- POPUP END -----*/
+/*-------------------------*/
+
+
+
+
+
 
 /* ----- ABOUT ME SECTION ----- */
 
@@ -425,6 +527,11 @@ button:active {
 
 .about-me__button {
   margin: 5% auto 0 auto;
+  padding: 0;
+}
+
+.about-me__button a {
+  padding: 0;
 }
 
 .about-me__wrapper {
