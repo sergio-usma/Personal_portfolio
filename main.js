@@ -1,5 +1,5 @@
 // DOM  items
-const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+const viewportWidth = window.innerWidth;
 const header = document.querySelector('#header');
 const burger = document.querySelector('#burger');
 
