@@ -347,8 +347,8 @@ email.addEventListener('input', () => {
 
 /* ------- PREVENT SUBMIT ----------*/
 document.getElementsByClassName('contact__form')[0].addEventListener('submit', (event) => {
-    const emailValue = document.getElementById('email').value;
-    if (emailValue !== emailValue.toLowerCase()) {
-      event.preventDefault();
-    }
-  });
+  const emailValue = document.getElementById('email').value;
+  if (emailValue !== emailValue.toLowerCase()) {
+    event.preventDefault();
+  }
+});
