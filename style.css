@@ -780,7 +780,7 @@ label {
   display: flex;
   align-items: flex-start;
   width: 100%;
-  margin-left: 2.5%;
+  margin-left: 1.5%;
 }
 
 .error-message {
@@ -789,7 +789,7 @@ label {
   background-color: #f8d7da;
   color: #721c24;
   font-size: 12px;
-  border-radius: 4px;
+  border-radius: 2px;
   transition: opacity 0.3s ease;
 }
 
