@@ -302,3 +302,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/* ----------- FORM VALIDATION ----------*/
+const fullName = document.getElementById('full-name');
+const firstName = document.getElementById('firstname');
+const lastName = document.getElementById('lastname');
+const email = document.getElementById('email');
+
+if (viewportWidth < 600) {
+  firstName.removeAttribute('required');
+  lastName.removeAttribute('required');
+} else {
+  fullName.removeAttribute('required');
+}
+
+/* ------- ERROR MESSAGE ------*/
+function errorMessage() {
+  const errorWindow = document.createElement('div');
+  errorWindow.setAttribute('id', 'error-window');
+  const errorMsg = document.createElement('div');
+  errorMsg.setAttribute('id', 'error-message');
+  errorMsg.setAttribute('class', 'error-message');
+  const errorMsgText = document.createTextNode(
+    'Your email should have only lowercase letters',
+  );
+  errorMsg.appendChild(errorMsgText);
+  errorWindow.appendChild(errorMsg);
+  email.after(errorWindow);
+}
+
+/* ------- VALIDATE EMAIL FORMAT -------*/
+email.addEventListener('input', () => {
+  const emailValue = email.value;
+  const contactForm = document.getElementsByClassName('contact__form')[0];
+  const emailError = document.getElementById('error-message');
+  if (emailValue !== emailValue.toLowerCase()) {
+    if (contactForm.contains(emailError) === false) {
+      errorMessage();
+    }
+  } else if (document.body.contains(emailError) === true) {
+    emailError.remove();
+  }
+});
+
+/* ------- PREVENT SUBMIT ----------*/
+document
+  .getElementsByClassName('contact__form')[0]
+  .addEventListener('submit', (event) => {
+    const emailValue = document.getElementById('email').value;
+    if (emailValue !== emailValue.toLowerCase()) {
+      event.preventDefault();
+    }
+  });
