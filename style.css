@@ -101,6 +101,24 @@ header ul {
   background: var(--color-white);
 }
 
+button,
+button a {
+  max-height: 48px;
+  padding: 0 5%;
+  margin: 0 12px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.about-me__button a {
+  padding: 0;
+}
+
 .header-active ul {
   height: 250px;
   width: 100vw;
@@ -293,7 +311,11 @@ h2,
   border-radius: 8px;
 }
 
-.project__card__description {
+.project__card:last-child {
+  display: none;
+}
+
+.project__card__wrapper {
   width: 327px;
   height: 222px;
   position: absolute;
@@ -310,7 +332,7 @@ h2,
   border-radius: 8px;
 }
 
-h3,
+h4,
 .project__card__title {
   width: 100%;
   height: 48px;
@@ -329,6 +351,7 @@ h3,
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  gap: 8px 0;
   list-style: none;
   float: left;
 }
@@ -350,6 +373,14 @@ h3,
   border-radius: 4px;
 }
 
+.project__card__description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-nav-text);
+}
+
 button,
 .project__card__button {
   width: auto;
@@ -358,17 +389,6 @@ button,
   margin-top: 8px;
   background: var(--color-button-enabled);
   border-radius: 4px;
-}
-
-button,
-button a {
-  margin: 0 12px;
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 24px;
-  color: var(--color-white);
 }
 
 button:hover {
@@ -385,6 +405,180 @@ button:active {
   line-height: 4.4rem;
   text-decoration: none;
   color: var(--color-card-text);
+}
+
+/* --------------------------- */
+
+/* ----- POPUP CREATION ----- */
+
+/* ------------------------- */
+
+.popup__window {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #c1c7d0;
+  background-blend-mode: multiply;
+  z-index: 100;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.popup-content {
+  padding: 1.6rem;
+  width: 90%;
+  max-width: 920px;
+  max-height: 1083px;
+  margin: 5% auto 2% auto;
+  background: #fff;
+  border: 1px solid #ebecf0;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  border-radius: 8px;
+  z-index: 200;
+}
+
+.popup-content__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "img"
+    "title"
+    "tags"
+    "description"
+    "buttons";
+  justify-content: center;
+  align-items: center;
+}
+
+#popup__close__button {
+  grid-area: 1/1/2/2;
+  align-self: start;
+  justify-self: end;
+  margin: 1rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+}
+
+#popup__close__button .bar {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-white);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#popup__close__button .bar:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#popup__close__button .bar:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.popup__picture {
+  grid-area: img;
+}
+
+.popup__picture img {
+  width: 100%;
+  max-width: 910px;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.popup__title {
+  grid-area: title;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4.4rem;
+  text-align: left;
+  color: #172b4d;
+  margin: 2rem 0;
+}
+
+li:nth-child(n + 4) {
+  display: none;
+}
+
+#popup__card__tags {
+  grid-area: tags;
+  justify-content: left;
+  width: 100%;
+}
+
+.about-me__card__tags li {
+  height: 40px;
+  background: #fff;
+  border-radius: 8px;
+  color: #36b37e;
+}
+
+#popup__card__tags li {
+  margin-right: 8px;
+  padding: 0 10px;
+}
+
+.popup__description {
+  grid-area: description;
+  width: 100%;
+  min-width: 0;
+  margin: 2rem 0 1rem 0;
+  text-align: justify;
+  line-height: 140%;
+  font-size: 100%;
+}
+
+.popup__buttons__container {
+  grid-area: buttons;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: start;
+  margin-top: 1vh;
+  gap: 12px 18px;
+  width: 100%;
+  height: 70%;
+}
+
+#popup__live__link__button {
+  flex-basis: 45%;
+  margin: 0;
+  font-size: 100%;
+  padding: 0 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6rem;
+}
+
+#popup__live__link__button img {
+  width: 18px;
+  margin-left: 1rem;
+}
+
+#popup__source__link__button {
+  flex-basis: 50%;
+  margin: 0;
+  font-size: 100%;
+  padding: 0 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6rem;
+}
+
+#popup__source__link__button img {
+  width: 18px;
+  margin-left: 1rem;
 }
 
 /* ----- ABOUT ME SECTION ----- */
@@ -425,6 +619,7 @@ button:active {
 
 .about-me__button {
   margin: 5% auto 0 auto;
+  padding: 0;
 }
 
 .about-me__wrapper {
@@ -464,27 +659,22 @@ button:active {
   box-shadow: 0 16px 24px rgba(37, 47, 137, 0.08);
 }
 
-.about-me__icon__holder img {
-  /* height: 0%; */
-
-  /* width: 10%; */
-}
-
 .about-me__card__title {
-  margin-bottom: 10px;
+  width: 100%;
+  height: 48px;
+  margin: 0 0 10px 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  text-align: center;
+  color: var(--color-card-text);
 }
 
 .about-me__card__tags {
   width: 90%;
   justify-content: center;
   gap: 8px;
-}
-
-.about-me__card__tags li {
-  height: 40px;
-  background: #fff;
-  border-radius: 8px;
-  color: #36b37e;
 }
 
 /* ----- CONTACT SECTION ----- */
@@ -697,6 +887,62 @@ footer {
     display: none;
   }
 
+  /* POPUP STARTS */
+
+  .popup-content {
+    padding: 0;
+  }
+
+  .popup-content__wrapper {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "..  close"
+      "img  img"
+      "title buttons"
+      "tags  tags"
+      "description description";
+    padding: 2rem 20px;
+  }
+
+  li:nth-child(n + 4) {
+    display: flex;
+  }
+
+  .popup__description {
+    max-width: 100%;
+  }
+
+  #popup__close__button {
+    grid-area: close;
+    justify-self: end;
+    margin: 0 0 1rem 0;
+    background: #ebecf0;
+    mix-blend-mode: multiply;
+    border-radius: 8px;
+    position: relative;
+  }
+
+  #popup__close__button .bar {
+    background-color: #67798e;
+  }
+
+  .popup__buttons__container {
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-self: center;
+    margin-top: 0.5rem;
+  }
+
+  #popup__live__link__button {
+    flex-basis: 70%;
+  }
+
+  #popup__source__link__button {
+    flex-basis: 70%;
+  }
+
+  /* POPUP ENDS */
+
   .about-me__description {
     width: 68vw;
   }
@@ -779,6 +1025,21 @@ footer {
 
   .main__arrow-button {
     margin-top: 15%;
+  }
+
+  .popup-content__wrapper {
+    grid-template-areas:
+      ".. ... ... close"
+      "img  img img img"
+      "title  title title buttons"
+      "tags tags tags tags"
+      "description description description description";
+  }
+
+  .popup__buttons__container {
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin-top: 2.5rem;
   }
 
   .about-me__container {
