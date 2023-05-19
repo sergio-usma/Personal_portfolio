@@ -45,10 +45,6 @@ body {
 
 /* ----- HEADER SECTION ----- */
 
-/* ------------------------------- */
-
-/* ------------------------------- */
-
 header {
   /* background-color: purple; */
 }
@@ -88,9 +84,7 @@ header ul {
   background-color: var(--color-dark-blue);
 }
 
-/* ------------------------------- */
-
-/* ------------------------------- */
+/* -----------BURGER MENU - ACTIVE ------------ */
 
 .header-active {
   width: 100vw;
@@ -407,11 +401,7 @@ button:active {
   color: var(--color-card-text);
 }
 
-/* --------------------------- */
-
 /* ----- POPUP CREATION ----- */
-
-/* ------------------------- */
 
 .popup__window {
   display: none;
@@ -504,10 +494,6 @@ button:active {
   margin: 2rem 0;
 }
 
-li:nth-child(n + 4) {
-  display: none;
-}
-
 #popup__card__tags {
   grid-area: tags;
   justify-content: left;
@@ -524,6 +510,10 @@ li:nth-child(n + 4) {
 #popup__card__tags li {
   margin-right: 8px;
   padding: 0 10px;
+}
+
+#popup__card__tags li:nth-child(n + 4) {
+  display: none;
 }
 
 .popup__description {
@@ -633,9 +623,6 @@ li:nth-child(n + 4) {
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-
-  /* justify-content: center; */
-
   background: #ebf0ee;
   border: 1px solid #c1c7d0;
 }
@@ -708,10 +695,6 @@ li:nth-child(n + 4) {
   margin-bottom: 5%;
 }
 
-.desktop__form {
-  display: none;
-}
-
 .contact__form {
   width: 90%;
   max-width: 684px;
@@ -731,12 +714,10 @@ li:nth-child(n + 4) {
 }
 
 .name {
-  grid-area: name;
   display: none;
 }
 
 .lastname {
-  grid-area: lastname;
   display: none;
 }
 
@@ -791,6 +772,41 @@ label {
 
 .contact__container__email {
   margin: 0 auto 8% auto;
+}
+
+/* ------ FORM VALIDATION ------ */
+
+#error-window {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: 1.5%;
+}
+
+.error-message {
+  position: absolute;
+  padding: 8px;
+  background-color: #f8d7da;
+  color: #721c24;
+  font-size: 12px;
+  border-radius: 2px;
+  transition: opacity 0.3s ease;
+}
+
+.error-message::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  margin-top: -6px;
+  border: 6px solid transparent;
+  border-top-color: #f8d7da;
+  transition: opacity 0.3s ease;
+}
+
+.error-message.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* ----- FOOTER SECTION ----- */
@@ -904,7 +920,7 @@ footer {
     padding: 2rem 20px;
   }
 
-  li:nth-child(n + 4) {
+  #popup__card__tags li:nth-child(n + 4) {
     display: flex;
   }
 
@@ -955,14 +971,6 @@ footer {
     margin: 3% 0;
   }
 
-  .mobile__form {
-    display: none;
-  }
-
-  .desktop__form {
-    display: block;
-  }
-
   .contact__form ul {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -975,7 +983,6 @@ footer {
   }
 
   .full-name {
-    grid-area: full-name;
     display: none;
   }
 
