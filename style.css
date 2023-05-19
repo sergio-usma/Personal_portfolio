@@ -1044,9 +1044,20 @@ footer {
   }
 
   .popup__buttons__container {
+    width: 100%;
     flex-flow: row nowrap;
     justify-content: flex-end;
     margin-top: 2.5rem;
+  }
+
+  #popup__live__link__button {
+    flex-basis: 45%;
+    padding: 0 2%;
+  }
+
+  #popup__source__link__button {
+    flex-basis: 55%;
+    padding: 0 2%;
   }
 
   .about-me__container {
