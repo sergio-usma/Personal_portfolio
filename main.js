@@ -345,10 +345,57 @@ email.addEventListener('input', () => {
   }
 });
 
-/* ------- PREVENT SUBMIT ----------*/
-document.getElementsByClassName('contact__form')[0].addEventListener('submit', (event) => {
+/* ------- PREVENT SUBMIT FORM WITH ERROR ----------*/
+document
+  .getElementsByClassName('contact__form')[0]
+  .addEventListener('submit', (event) => {
+    const emailValue = document.getElementById('email').value;
+    if (emailValue !== emailValue.toLowerCase()) {
+      event.preventDefault();
+    }
+  });
+
+/* ------- SAVE INPUT VALUES TO LOCAL STORAGE -------*/
+const contactForm = document.getElementsByClassName('contact__form')[0];
+contactForm.addEventListener('submit', () => {
+  const fullNameValue = document.getElementById('full-name').value;
+  const firstNameValue = document.getElementById('firstname').value;
+  const lastNameValue = document.getElementById('lastname').value;
   const emailValue = document.getElementById('email').value;
-  if (emailValue !== emailValue.toLowerCase()) {
-    event.preventDefault();
+  const messageValue = document.getElementById('message').value;
+  localStorage.setItem('fullName', fullNameValue);
+  localStorage.setItem('firstName', firstNameValue);
+  localStorage.setItem('lastName', lastNameValue);
+  localStorage.setItem('email', emailValue);
+  localStorage.setItem('message', messageValue);
+});
+
+/* ------- GET INPUT VALUES FROM LOCAL STORAGE -------*/
+window.addEventListener('load', () => {
+  const fullNameValue = localStorage.getItem('fullName');
+  const firstNameValue = localStorage.getItem('firstName');
+  const lastNameValue = localStorage.getItem('lastName');
+  const emailValue = localStorage.getItem('email');
+  const messageValue = localStorage.getItem('message');
+
+  if (fullNameValue !== null) {
+    document.getElementById('full-name').value = fullNameValue;
+  } else {
+    document.getElementById('full-name').value = '';
   }
+
+  if (firstNameValue !== null) {
+    document.getElementById('firstname').value = firstNameValue;
+  } else {
+    document.getElementById('firstname').value = '';
+  }
+
+  if (lastNameValue !== null) {
+    document.getElementById('lastname').value = lastNameValue;
+  } else {
+    document.getElementById('lastname').value = '';
+  }
+
+  document.getElementById('email').value = emailValue;
+  document.getElementById('message').value = messageValue;
 });
