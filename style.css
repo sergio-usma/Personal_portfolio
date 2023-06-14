@@ -305,8 +305,10 @@ h2,
   border-radius: 8px;
 }
 
-.project__card:last-child {
-  display: none;
+.project__card:hover {
+  transform: scale(1.03);
+  transition: all 0.1s ease;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .project__card__wrapper {
@@ -326,11 +328,19 @@ h2,
   border-radius: 8px;
 }
 
+.project__card__image {
+  object-fit: fill;
+  width: 100%;
+  height: 55%;
+  border-radius: 8px 8px 0 0;
+}
+
 h4,
 .project__card__title {
   width: 100%;
   height: 48px;
   margin: 0 0 16px 0;
+  padding: 0 1rem 0 1rem;
   font-style: normal;
   font-weight: 600;
   font-size: 2.4rem;
@@ -344,8 +354,8 @@ h4,
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  gap: 8px 0;
+  justify-content: center;
+  gap: 8px;
   list-style: none;
   float: left;
 }
@@ -1132,6 +1142,10 @@ footer {
   article {
     transform: scale(1.1);
     margin: 6% 0;
+  }
+
+  .project__card:hover {
+    transform: scale(1.13);
   }
 
   .wrapper {

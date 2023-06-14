@@ -40,8 +40,35 @@ const mediaQueryBr = () => {
 
 const projectsArray = [
   {
+    name: 'The World Tourism Summit 2023',
+    imgMobile: './assets/img/tourismSummit_mb.png',
+    imgDesktop: './assets/img/tourismSummit_mb.png',
+    techTags: ['HTML', 'CSS', 'JavaScript'],
+    liveLink: 'https://sergio-usma.github.io/First_capstone_project/',
+    sourceLink: 'https://github.com/sergio-usma/First_capstone_project',
+    description: 'The first capstone project for \'The Portal\' module in the Microverse curriculum is a dynamic website utilizing HTML, CSS, and basic JavaScript. The project showcases the comprehensive details of The World Tourism Summit 2023, scheduled to be held in Bogota, Colombia, from November 27th to 29th at CORFERIAS.',
+  },
+  {
+    name: 'Awesome To-Do List',
+    imgMobile: './assets/img/awesomeList_mb.png',
+    imgDesktop: './assets/img/awesomeList_mb.png',
+    techTags: ['HTML', 'CSS', 'JavaScript', 'Webpack'],
+    liveLink: 'https://sergio-usma.github.io/To-Do-List/',
+    sourceLink: 'https://github.com/sergio-usma/To-Do-List',
+    description: 'This is a project for lightweight task management application using a To-Do List. It was built using HTML, CSS, and JavaScript. It allows users to add, delete, and mark tasks as complete, with data stored locally. It serves as an introduction to web development and DOM manipulation.',
+  },
+  {
+    name: 'Wall of Wonder by Frontend Masters',
+    imgMobile: './assets/img/flexProject_mb.png',
+    imgDesktop: './assets/img/flexProject_mb.png',
+    techTags: ['HTML', 'CSS', 'JavaScript'],
+    liveLink: 'https://sergio-usma.github.io/flexbox-test/',
+    sourceLink: 'https://github.com/sergio-usma/flexbox-test',
+    description: 'This repository features a personal project that demonstrates the application of CSS grid and flexbox techniques. Explore diverse layouts and responsive designs, showcasing the versatility and power of these CSS tools. Delve into the code to discover visually appealing and dynamic web layouts created using grid and flexbox.',
+  },
+  {
     name: 'Multi-Post Stories Gain+Glory',
-    imgMobile: './assets/img/cardMobile.png',
+    imgMobile: './assets/img/cardMobile.jpg',
     imgDesktop: './assets/img/cardDesktop.png',
     techTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     liveLink: 'https://example.com/project1',
@@ -50,43 +77,7 @@ const projectsArray = [
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
-    imgMobile: './assets/img/cardMobile.png',
-    imgDesktop: './assets/img/cardDesktop.png',
-    techTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
-    liveLink: 'https://example.com/project1',
-    sourceLink: 'https://github.com/user/project1',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.${mediaQueryBr()}Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.`,
-  },
-  {
-    name: 'Multi-Post Stories Gain+Glory',
-    imgMobile: './assets/img/cardMobile.png',
-    imgDesktop: './assets/img/cardDesktop.png',
-    techTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
-    liveLink: 'https://example.com/project1',
-    sourceLink: 'https://github.com/user/project1',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.${mediaQueryBr()}Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.`,
-  },
-  {
-    name: 'Multi-Post Stories Gain+Glory',
-    imgMobile: './assets/img/cardMobile.png',
-    imgDesktop: './assets/img/cardDesktop.png',
-    techTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
-    liveLink: 'https://example.com/project1',
-    sourceLink: 'https://github.com/user/project1',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.${mediaQueryBr()}Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.`,
-  },
-  {
-    name: 'Multi-Post Stories Gain+Glory',
-    imgMobile: './assets/img/cardMobile.png',
-    imgDesktop: './assets/img/cardDesktop.png',
-    techTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
-    liveLink: 'https://example.com/project1',
-    sourceLink: 'https://github.com/user/project1',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.${mediaQueryBr()}Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.`,
-  },
-  {
-    name: 'Multi-Post Stories Gain+Glory',
-    imgMobile: './assets/img/cardMobile.png',
+    imgMobile: './assets/img/cardMobile.jpg',
     imgDesktop: './assets/img/cardDesktop.png',
     techTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     liveLink: 'https://example.com/project1',
@@ -121,7 +112,13 @@ for (let i = 0; i < projectsArray.length; i += 1) {
   const projectCard = document.createElement('article');
   projectCard.classList.add('project__card', `card${i}`);
   //     Space for image
-  /*-----------------*/
+
+  const projectCardImage = document.createElement('img');
+  projectCardImage.classList.add('project__card__image');
+  projectCardImage.setAttribute('src', projectsArray[i].imgMobile);
+  projectCardImage.setAttribute('alt', projectsArray[i].name);
+  projectCard.appendChild(projectCardImage);
+
   const projectCardWrapper = document.createElement('div');
   projectCardWrapper.classList.add('project__card__wrapper');
   projectCard.appendChild(projectCardWrapper);
@@ -144,6 +141,7 @@ for (let i = 0; i < projectsArray.length; i += 1) {
   projectCardButton.classList.add('project__card__button');
   projectCardButton.setAttribute('type', 'button');
   projectCardButton.innerHTML = 'See Project';
+
   projectCardWrapper.appendChild(projectCardButton);
 
   projectsWrapper.appendChild(projectCard);
@@ -153,7 +151,8 @@ for (let i = 0; i < projectsArray.length; i += 1) {
 /* -------------------- POPUP CREATION ---------------------*/
 /*---------------------------------------------------------*/
 
-function createPopup() {
+function createPopup(index) {
+  const project = projectsArray[index];
   const projectsWrapper = document.getElementsByClassName('projects__wrapper')[0];
 
   // Create popup window
@@ -194,19 +193,19 @@ function createPopup() {
   // Generate popup source tag
   const popupSource = document.createElement('source');
   popupSource.setAttribute('media', '(min-width: 600px)');
-  popupSource.setAttribute('srcset', projectsArray[6].imgDesktop);
+  popupSource.setAttribute('srcset', project.imgDesktop);
   popupPicture.appendChild(popupSource);
 
   // Generate popup image tag
   const popupImage = document.createElement('img');
-  popupImage.setAttribute('src', projectsArray[6].imgMobile);
+  popupImage.setAttribute('src', project.imgMobile);
   popupImage.setAttribute('alt', 'Project Image');
   popupPicture.appendChild(popupImage);
 
   // Generate popup title
   const popupTitle = document.createElement('h3');
   popupTitle.classList.add('popup__title');
-  popupTitle.innerHTML = projectsArray[6].name;
+  popupTitle.innerHTML = project.name;
   popupContentWrapper.appendChild(popupTitle);
 
   // Generate popup card tags
@@ -216,13 +215,9 @@ function createPopup() {
   popupContentWrapper.appendChild(popupCardTags);
 
   // generate popup card tags list
-  for (let j = 0; j < projectsArray[6].techTags.length; j += 1) {
+  for (let j = 0; j < project.techTags.length; j += 1) {
     const popupCardTag = document.createElement('li');
-    if (viewportWidth > 600) {
-      popupCardTag.innerHTML = projectsArray[6].techTags[j];
-    } else {
-      popupCardTag.innerHTML = projectsArray[0].techTags[j];
-    }
+    popupCardTag.innerHTML = project.techTags[j];
     popupCardTags.appendChild(popupCardTag);
   }
 
@@ -230,7 +225,7 @@ function createPopup() {
   const popupDescription = document.createElement('p');
   popupDescription.setAttribute('id', 'popup__description');
   popupDescription.classList.add('popup__description');
-  popupDescription.innerHTML = projectsArray[6].description;
+  popupDescription.innerHTML = project.description;
   popupContentWrapper.appendChild(popupDescription);
 
   // Generate popup buttons container
@@ -280,26 +275,27 @@ function createPopup() {
 
   // Add event listener to popup live link button
   popupLiveLinkButton.addEventListener('click', () => {
-    window.open(projectsArray[6].liveLink);
+    window.open(project.liveLink);
   });
 
   // Add event listener to popup source link button
   popupSourceLinkButton.addEventListener('click', () => {
-    window.open(projectsArray[6].sourceLink);
+    window.open(project.sourceLink);
   });
 }
 
 /* ----------- ADD EVENT LISTENER TO PROJECT CARD BUTTONS----------*/
 document.addEventListener('DOMContentLoaded', () => {
-  const projectCardButtons = document.getElementsByClassName(
-    'project__card__button',
-  );
+  const projectCardButtons = document.querySelectorAll('.project__card__button');
+
   for (let i = 0; i < projectCardButtons.length; i += 1) {
-    projectCardButtons[i].addEventListener('click', () => {
-      createPopup();
-      const popupWindow = document.getElementById('popup__window');
-      popupWindow.style.display = 'block';
-    });
+    ((index) => {
+      projectCardButtons[index].addEventListener('click', () => {
+        createPopup(index);
+        const popupWindow = document.getElementsByClassName('popup__window')[index];
+        popupWindow.style.display = 'block';
+      });
+    })(i);
   }
 });
 
